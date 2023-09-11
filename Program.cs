@@ -97,6 +97,8 @@ do
 
     Console.WriteLine($"You selected menu option {menuSelection}.");
 
+    bool validEntry = false;
+
     switch (menuSelection)
     {
         case "1":
@@ -137,8 +139,6 @@ do
 
             while (anotherPet == "y" && petCount < maxPets)
             {
-                bool validEntry = false;
-
                 // get species (cat or dog) - string animalSpecies is a required field 
                 do
                 {
@@ -282,7 +282,59 @@ do
 
         case "3":
             // Ensure animal ages and physical descriptions are complete
-            Console.WriteLine("Challenge Project - please check back soon to see progress.");
+
+            for (int i = 0; i < ourAnimals.Length; i++)
+            {
+                if(ourAnimals[i,0] == "ID #:")
+                {
+                    continue;
+                }
+
+                if (ourAnimals[i, 2] == "" || ourAnimals[i, 2] == "?")
+                {
+                    Console.WriteLine($"Enter an age for {ourAnimals[i, 0]}");
+
+                    // get the pet's age. 
+                    do
+                    {
+                        int petAge;
+
+                        Console.WriteLine("Enter the pet's age or enter ? if unknown");
+                        readResult = Console.ReadLine();
+
+                        if (readResult != null)
+                        {
+                            animalAge = readResult;
+
+                            if (animalAge != "?")
+                            {
+                                validEntry = int.TryParse(animalAge, out petAge);
+                            }
+                        }
+                    }
+                    while (validEntry == false);
+
+                    ourAnimals[i, 2] = "Age: " + animalAge;
+
+                }
+
+                // get a description of the pet's physical appearance/condition.
+                do
+                {
+                    Console.WriteLine($"Enter an physical appearance/condition for {ourAnimals[i, 0]}");
+                    readResult = Console.ReadLine();
+
+                    if (readResult != null)
+                    {
+                        animalPhysicalDescription = readResult.ToLower();
+                    }
+                }
+                while (animalPhysicalDescription == "");
+
+                ourAnimals[i, 2] = "Age: " + animalAge;
+                ourAnimals[i, 4] = "Physical description: " + animalPhysicalDescription;
+            }
+
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;
