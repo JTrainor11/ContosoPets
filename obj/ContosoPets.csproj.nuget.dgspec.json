@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ContosoPets\\ContosoPets.csproj": {}
+    "D:\\Repositories\\ContosoPets\\ContosoPets.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\ContosoPets\\ContosoPets.csproj": {
+    "D:\\Repositories\\ContosoPets\\ContosoPets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ContosoPets\\ContosoPets.csproj",
+        "projectUniqueName": "D:\\Repositories\\ContosoPets\\ContosoPets.csproj",
         "projectName": "ContosoPets",
-        "projectPath": "C:\\Projects\\ContosoPets\\ContosoPets.csproj",
-        "packagesPath": "C:\\Users\\JonathanTrainor\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ContosoPets\\obj\\",
+        "projectPath": "D:\\Repositories\\ContosoPets\\ContosoPets.csproj",
+        "packagesPath": "C:\\Users\\jonny\\.nuget\\packages\\",
+        "outputPath": "D:\\Repositories\\ContosoPets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JonathanTrainor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
